@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		041AC61522346C3B001A6482 /* NoteDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041AC61422346C3B001A6482 /* NoteDetailVC.swift */; };
 		04A21B4A2233DD1C00F02101 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A21B492233DD1C00F02101 /* AppDelegate.swift */; };
 		04A21B4C2233DD1C00F02101 /* NoteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A21B4B2233DD1C00F02101 /* NoteVC.swift */; };
 		04A21B4F2233DD1C00F02101 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04A21B4D2233DD1C00F02101 /* Main.storyboard */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		041AC61422346C3B001A6482 /* NoteDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteDetailVC.swift; sourceTree = "<group>"; };
 		04A21B462233DD1C00F02101 /* Secure Notes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Secure Notes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04A21B492233DD1C00F02101 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04A21B4B2233DD1C00F02101 /* NoteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteVC.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 			children = (
 				04A21B4B2233DD1C00F02101 /* NoteVC.swift */,
 				04A21B682233EC5200F02101 /* CreateNoteVC.swift */,
+				041AC61422346C3B001A6482 /* NoteDetailVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -255,6 +258,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04A21B692233EC5200F02101 /* CreateNoteVC.swift in Sources */,
+				041AC61522346C3B001A6482 /* NoteDetailVC.swift in Sources */,
 				04A21B612233DFC800F02101 /* NoteCell.swift in Sources */,
 				04A21B4C2233DD1C00F02101 /* NoteVC.swift in Sources */,
 				04A21B652233E1AC00F02101 /* LockStatus.swift in Sources */,
