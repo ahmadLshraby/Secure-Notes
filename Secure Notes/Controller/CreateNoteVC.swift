@@ -29,7 +29,7 @@ class CreateNoteVC: UIViewController {
         let newNote = Note()
         newNote.noteTitle = noteTitle
         newNote.message = noteMessage
-        newNote.lockStatus = .unlocked
+        newNote.lockStatus = .locked
         
         save(note: newNote)
         navigationController?.popViewController(animated: true)

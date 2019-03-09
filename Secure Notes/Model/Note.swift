@@ -12,8 +12,8 @@ import RealmSwift
 class Note: Object {
     
      @objc dynamic var message: String = ""
-    @objc dynamic var noteTitle: String = ""
-     var lockStatus: LockStatus = .unlocked
+     @objc dynamic var noteTitle: String = ""
+    var lockStatus: LockStatus = .unlocked
     
     convenience init(message: String, noteTitle: String, lockStatus: LockStatus) {
         self.init()
