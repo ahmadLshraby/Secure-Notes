@@ -8,20 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		04A21B4A2233DD1C00F02101 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A21B492233DD1C00F02101 /* AppDelegate.swift */; };
-		04A21B4C2233DD1C00F02101 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A21B4B2233DD1C00F02101 /* ViewController.swift */; };
+		04A21B4C2233DD1C00F02101 /* NoteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A21B4B2233DD1C00F02101 /* NoteVC.swift */; };
 		04A21B4F2233DD1C00F02101 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04A21B4D2233DD1C00F02101 /* Main.storyboard */; };
 		04A21B512233DD1E00F02101 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04A21B502233DD1E00F02101 /* Assets.xcassets */; };
 		04A21B542233DD1E00F02101 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04A21B522233DD1E00F02101 /* LaunchScreen.storyboard */; };
+		04A21B612233DFC800F02101 /* NoteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A21B602233DFC800F02101 /* NoteCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		04A21B462233DD1C00F02101 /* Secure Notes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Secure Notes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04A21B492233DD1C00F02101 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		04A21B4B2233DD1C00F02101 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		04A21B4B2233DD1C00F02101 /* NoteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteVC.swift; sourceTree = "<group>"; };
 		04A21B4E2233DD1C00F02101 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		04A21B502233DD1E00F02101 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04A21B532233DD1E00F02101 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04A21B552233DD1E00F02101 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04A21B602233DFC800F02101 /* NoteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,13 +57,54 @@
 			isa = PBXGroup;
 			children = (
 				04A21B492233DD1C00F02101 /* AppDelegate.swift */,
-				04A21B4B2233DD1C00F02101 /* ViewController.swift */,
 				04A21B4D2233DD1C00F02101 /* Main.storyboard */,
+				04A21B5F2233DD7000F02101 /* Helper */,
+				04A21B5E2233DD6900F02101 /* Enums */,
+				04A21B5D2233DD4F00F02101 /* Model */,
+				04A21B5C2233DD4000F02101 /* View */,
+				04A21B5B2233DD3600F02101 /* Controller */,
 				04A21B502233DD1E00F02101 /* Assets.xcassets */,
 				04A21B522233DD1E00F02101 /* LaunchScreen.storyboard */,
 				04A21B552233DD1E00F02101 /* Info.plist */,
 			);
 			path = "Secure Notes";
+			sourceTree = "<group>";
+		};
+		04A21B5B2233DD3600F02101 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				04A21B4B2233DD1C00F02101 /* NoteVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		04A21B5C2233DD4000F02101 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				04A21B602233DFC800F02101 /* NoteCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		04A21B5D2233DD4F00F02101 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		04A21B5E2233DD6900F02101 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		04A21B5F2233DD7000F02101 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,7 +178,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04A21B4C2233DD1C00F02101 /* ViewController.swift in Sources */,
+				04A21B612233DFC800F02101 /* NoteCell.swift in Sources */,
+				04A21B4C2233DD1C00F02101 /* NoteVC.swift in Sources */,
 				04A21B4A2233DD1C00F02101 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -285,6 +329,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F7S769X964;
 				INFOPLIST_FILE = "Secure Notes/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -303,6 +348,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F7S769X964;
 				INFOPLIST_FILE = "Secure Notes/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
