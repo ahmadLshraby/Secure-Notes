@@ -27,7 +27,7 @@ class NoteCell: UITableViewCell {
             messageLbl.text = "This Note is Locked, Unlock to read"
             lockImageView.isHidden = false
         }else {
-            messageLbl.text = note.message
+            messageLbl.text = note.noteTitle
             lockImageView.isHidden = true
         }
     }

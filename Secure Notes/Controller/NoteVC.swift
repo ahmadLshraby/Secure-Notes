@@ -7,8 +7,13 @@
 //
 
 import UIKit
+import RealmSwift
 
 class NoteVC: UIViewController {
+    
+    let realm = try! Realm()
+    
+    var notes: Results<Note>?
 
     @IBOutlet weak var tableView: UITableView!
     
@@ -19,8 +24,15 @@ class NoteVC: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        loadNotes()
+    }
 
-
+    func loadNotes() {
+        notes = realm.objects(Note.self)
+        tableView.reloadData()
+    }
     
     
     
@@ -31,12 +43,13 @@ class NoteVC: UIViewController {
 extension NoteVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return notesArray.count
+        return notes?.count ?? 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "noteCell", for: indexPath) as? NoteCell {
-            cell.configureCell(note: notesArray[indexPath.row])
+            guard let note = notes?[indexPath.row] else { return NoteCell()}
+            cell.configureCell(note: note)
             return cell
         }else {
             return UITableViewCell()
@@ -45,3 +58,5 @@ extension NoteVC: UITableViewDelegate, UITableViewDataSource {
     
     
 }
+
+

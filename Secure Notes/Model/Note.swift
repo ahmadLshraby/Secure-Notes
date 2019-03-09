@@ -7,14 +7,18 @@
 //
 
 import Foundation
+import RealmSwift
 
-class Note {
+class Note: Object {
     
-    public private(set) var message: String
-    public var lockStatus: LockStatus
+     @objc dynamic var message: String = ""
+    @objc dynamic var noteTitle: String = ""
+     var lockStatus: LockStatus = .unlocked
     
-    init(message: String, lockStatus: LockStatus) {
+    convenience init(message: String, noteTitle: String, lockStatus: LockStatus) {
+        self.init()
         self.message = message
+        self.noteTitle = noteTitle
         self.lockStatus = lockStatus
     }
 }
