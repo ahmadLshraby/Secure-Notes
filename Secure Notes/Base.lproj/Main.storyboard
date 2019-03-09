@@ -28,7 +28,34 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dol-ga-US3" id="gEX-DQ-edX">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="79.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lock" translatesAutoresizingMaskIntoConstraints="NO" id="E73-2t-wGd">
+                                                    <rect key="frame" x="338" y="29" width="20" height="20"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="20" id="8f7-6M-Foy"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Note Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N3i-JE-bKd">
+                                                    <rect key="frame" x="23" y="19" width="307" height="58"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="N3i-JE-bKd" firstAttribute="top" secondItem="gEX-DQ-edX" secondAttribute="topMargin" constant="8" id="0F1-5J-PYU"/>
+                                                <constraint firstItem="E73-2t-wGd" firstAttribute="trailing" secondItem="gEX-DQ-edX" secondAttribute="trailingMargin" constant="-2" id="1Gp-Tw-kXb"/>
+                                                <constraint firstItem="E73-2t-wGd" firstAttribute="leading" secondItem="N3i-JE-bKd" secondAttribute="trailing" constant="8" id="Bkp-GM-njv"/>
+                                                <constraint firstItem="N3i-JE-bKd" firstAttribute="leading" secondItem="gEX-DQ-edX" secondAttribute="leadingMargin" constant="8" id="NrI-GP-iXh"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="E73-2t-wGd" secondAttribute="bottom" constant="20" id="Twb-0n-aU1"/>
+                                                <constraint firstItem="N3i-JE-bKd" firstAttribute="bottom" secondItem="gEX-DQ-edX" secondAttribute="bottomMargin" constant="8" id="Yea-eq-V68"/>
+                                                <constraint firstItem="E73-2t-wGd" firstAttribute="top" secondItem="gEX-DQ-edX" secondAttribute="topMargin" constant="18" id="Z4L-Fb-GMr"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="lockImageView" destination="E73-2t-wGd" id="sDU-5R-eHh"/>
+                                            <outlet property="messageLbl" destination="N3i-JE-bKd" id="TvB-QG-tC8"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -42,7 +69,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Secure Notes" id="CKE-cj-TCg">
+                    <navigationItem key="navigationItem" title="Secure Notes" largeTitleDisplayMode="always" id="CKE-cj-TCg">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="jGh-VX-PrM">
                             <color key="tintColor" red="0.91764705879999997" green="0.66274509800000003" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
                         </barButtonItem>
@@ -64,6 +91,7 @@
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="18"/>
                             <color key="textColor" red="0.91764705882352937" green="0.66274509803921566" blue="0.26666666666666666" alpha="1" colorSpace="calibratedRGB"/>
                         </textAttributes>
                     </navigationBar>
@@ -77,4 +105,7 @@
             <point key="canvasLocation" x="124" y="134"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="lock" width="45" height="45"/>
+    </resources>
 </document>

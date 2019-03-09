@@ -11,6 +11,9 @@ import UIKit
 class NoteVC: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
@@ -28,12 +31,12 @@ class NoteVC: UIViewController {
 extension NoteVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return notesArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "noteCell", for: indexPath) as? NoteCell {
-            
+            cell.configureCell(note: notesArray[indexPath.row])
             return cell
         }else {
             return UITableViewCell()

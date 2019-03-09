@@ -13,6 +13,9 @@
 		04A21B512233DD1E00F02101 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04A21B502233DD1E00F02101 /* Assets.xcassets */; };
 		04A21B542233DD1E00F02101 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04A21B522233DD1E00F02101 /* LaunchScreen.storyboard */; };
 		04A21B612233DFC800F02101 /* NoteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A21B602233DFC800F02101 /* NoteCell.swift */; };
+		04A21B632233E14A00F02101 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A21B622233E14A00F02101 /* Note.swift */; };
+		04A21B652233E1AC00F02101 /* LockStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A21B642233E1AC00F02101 /* LockStatus.swift */; };
+		04A21B672233E23B00F02101 /* NoteObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A21B662233E23B00F02101 /* NoteObjects.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		04A21B532233DD1E00F02101 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04A21B552233DD1E00F02101 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04A21B602233DFC800F02101 /* NoteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteCell.swift; sourceTree = "<group>"; };
+		04A21B622233E14A00F02101 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
+		04A21B642233E1AC00F02101 /* LockStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockStatus.swift; sourceTree = "<group>"; };
+		04A21B662233E23B00F02101 /* NoteObjects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteObjects.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +95,7 @@
 		04A21B5D2233DD4F00F02101 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				04A21B622233E14A00F02101 /* Note.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -96,6 +103,7 @@
 		04A21B5E2233DD6900F02101 /* Enums */ = {
 			isa = PBXGroup;
 			children = (
+				04A21B642233E1AC00F02101 /* LockStatus.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -103,6 +111,7 @@
 		04A21B5F2233DD7000F02101 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				04A21B662233E23B00F02101 /* NoteObjects.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -178,9 +187,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04A21B672233E23B00F02101 /* NoteObjects.swift in Sources */,
 				04A21B612233DFC800F02101 /* NoteCell.swift in Sources */,
 				04A21B4C2233DD1C00F02101 /* NoteVC.swift in Sources */,
+				04A21B652233E1AC00F02101 /* LockStatus.swift in Sources */,
 				04A21B4A2233DD1C00F02101 /* AppDelegate.swift in Sources */,
+				04A21B632233E14A00F02101 /* Note.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
