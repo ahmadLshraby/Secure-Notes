@@ -23,8 +23,8 @@ class CreateNoteVC: UIViewController {
 
     @IBAction func CreateNoteBtn(_ sender: UIButton) {
         
-        guard let noteTitle = noteTitleTxt.text else { return }
-        guard let noteMessage = noteTxt.text else { return }
+        guard let noteTitle = noteTitleTxt.text, noteTitleTxt.text != "" else { return }
+        guard let noteMessage = noteTxt.text, noteTxt.text != "" else { return }
         
         let newNote = Note()
         newNote.noteTitle = noteTitle

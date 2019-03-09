@@ -26,12 +26,32 @@ class NoteVC: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         loadNotes()
     }
 
     func loadNotes() {
         notes = realm.objects(Note.self)
+        if notes?.count != 0 {
+            tableView.isHidden = false
+        }else {
+            tableView.isHidden = true
+        }
         tableView.reloadData()
+    }
+    
+    func delete(indexPath: IndexPath) {
+        if let deletedNote = notes?[indexPath.row] {
+            do {
+                try realm.write {
+                    realm.delete(deletedNote)
+                }
+            }catch {
+                print("delete error: \(error)")
+            }
+        }else {
+            return
+        }
     }
     
     
@@ -41,7 +61,7 @@ class NoteVC: UIViewController {
 
 
 extension NoteVC: UITableViewDelegate, UITableViewDataSource {
-    
+    // TableView configuration
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return notes?.count ?? 1
     }
@@ -56,7 +76,28 @@ extension NoteVC: UITableViewDelegate, UITableViewDataSource {
         }
     }
     
+//    // Swipe to Delete
+//    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+//        return true
+//    }
+//
+//    func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+//        return .none
+//    }
     
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        let deleteAction = UITableViewRowAction(style: .destructive, title: "🗑 \n DELETE") { (rowAction, indexPath) in
+            self.delete(indexPath: indexPath)
+            tableView.deleteRows(at: [indexPath], with: .automatic)  // delete the row of that indexPath
+            self.loadNotes()
+        }
+        deleteAction.backgroundColor = #colorLiteral(red: 1, green: 0.1491314173, blue: 0, alpha: 1)
+        
+        return [deleteAction]
+    }
+    
+    
+
 }
 
 

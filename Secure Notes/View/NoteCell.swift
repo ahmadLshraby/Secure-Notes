@@ -10,7 +10,7 @@ import UIKit
 
 class NoteCell: UITableViewCell {
 
-    @IBOutlet weak var messageLbl: UILabel!
+    @IBOutlet weak var titleLbl: UILabel!
     @IBOutlet weak var lockImageView: UIImageView!
     
     override func awakeFromNib() {
@@ -24,10 +24,10 @@ class NoteCell: UITableViewCell {
 
     func configureCell(note: Note) {
         if note.lockStatus == .locked {
-            messageLbl.text = "This Note is Locked, Unlock to read"
+            titleLbl.text = "This Note is Locked, Unlock to read"
             lockImageView.isHidden = false
         }else {
-            messageLbl.text = note.noteTitle
+            titleLbl.text = note.noteTitle
             lockImageView.isHidden = true
         }
     }
