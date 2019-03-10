@@ -7,10 +7,14 @@
 //
 
 import UIKit
+import RealmSwift
+
+let realmObj = try! Realm()
 
 class NoteDetailVC: UIViewController {
 
     @IBOutlet weak var noteMessageTxt: UITextView!
+    @IBOutlet weak var btnView: UIView!
     
     var note: Note!
     var index: Int!
@@ -18,10 +22,20 @@ class NoteDetailVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         noteMessageTxt.text = note?.message
+        btnView.bindToKeyboard()
     }
     
     @IBAction func lockNoteBtn(_ sender: UIButton) {
-        note?.isLocked = true
+        
+        do {
+            try realmObj.write {
+                note?.isLocked = true
+                note.message = noteMessageTxt.text
+            }
+        }catch {
+            print("update error: \(error)")
+        }
+        
         navigationController?.popViewController(animated: true)
     }
     

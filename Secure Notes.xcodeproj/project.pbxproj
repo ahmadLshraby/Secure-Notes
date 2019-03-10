@@ -18,6 +18,7 @@
 		04A21B632233E14A00F02101 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A21B622233E14A00F02101 /* Note.swift */; };
 		04A21B652233E1AC00F02101 /* LockStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A21B642233E1AC00F02101 /* LockStatus.swift */; };
 		04A21B692233EC5200F02101 /* CreateNoteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A21B682233EC5200F02101 /* CreateNoteVC.swift */; };
+		04A848B822359D1E001F5A66 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A848B722359D1E001F5A66 /* Button.swift */; };
 		58434E952208DD1975F21D12 /* Pods_Secure_Notes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BEB88E7521937FB383FB300 /* Pods_Secure_Notes.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +36,7 @@
 		04A21B622233E14A00F02101 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		04A21B642233E1AC00F02101 /* LockStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockStatus.swift; sourceTree = "<group>"; };
 		04A21B682233EC5200F02101 /* CreateNoteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNoteVC.swift; sourceTree = "<group>"; };
+		04A848B722359D1E001F5A66 /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		771FB873B6DE6D034EE9FB28 /* Pods-Secure Notes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Secure Notes.release.xcconfig"; path = "Pods/Target Support Files/Pods-Secure Notes/Pods-Secure Notes.release.xcconfig"; sourceTree = "<group>"; };
 		7BEB88E7521937FB383FB300 /* Pods_Secure_Notes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Secure_Notes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDD6F28B89227A127420A21D /* Pods-Secure Notes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Secure Notes.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Secure Notes/Pods-Secure Notes.debug.xcconfig"; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				04A21B602233DFC800F02101 /* NoteCell.swift */,
+				04A848B722359D1E001F5A66 /* Button.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -267,6 +270,7 @@
 				04A21B4C2233DD1C00F02101 /* NoteVC.swift in Sources */,
 				04A21B652233E1AC00F02101 /* LockStatus.swift in Sources */,
 				04A21B4A2233DD1C00F02101 /* AppDelegate.swift in Sources */,
+				04A848B822359D1E001F5A66 /* Button.swift in Sources */,
 				04A21B632233E14A00F02101 /* Note.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

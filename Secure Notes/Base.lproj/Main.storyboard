@@ -120,35 +120,50 @@
                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ahk-Ph-2Bk">
-                                <rect key="frame" x="20" y="607" width="335" height="40"/>
-                                <color key="backgroundColor" red="0.91764705879999997" green="0.66274509800000003" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NIf-hX-8mh">
+                                <rect key="frame" x="0.0" y="592" width="375" height="75"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ahk-Ph-2Bk">
+                                        <rect key="frame" x="20" y="17" width="335" height="40"/>
+                                        <color key="backgroundColor" red="0.91764705879999997" green="0.66274509800000003" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="K5g-rD-lHA"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="20"/>
+                                        <state key="normal" title="UPDATE &amp; LOCK">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="CreateNoteBtn:" destination="hR8-y1-ZvO" eventType="touchUpInside" id="1Om-bs-n2a"/>
+                                            <action selector="lockNoteBtn:" destination="kQq-uq-OVz" eventType="touchUpInside" id="c91-c5-KPY"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="rnl-yU-23P"/>
+                                    <constraint firstAttribute="bottom" secondItem="ahk-Ph-2Bk" secondAttribute="bottom" constant="18" id="0Na-lW-ayV"/>
+                                    <constraint firstItem="ahk-Ph-2Bk" firstAttribute="top" secondItem="NIf-hX-8mh" secondAttribute="top" constant="17" id="Le0-tA-0Nc"/>
+                                    <constraint firstItem="ahk-Ph-2Bk" firstAttribute="leading" secondItem="NIf-hX-8mh" secondAttribute="leading" constant="20" id="Mpf-Xp-as5"/>
+                                    <constraint firstAttribute="trailing" secondItem="ahk-Ph-2Bk" secondAttribute="trailing" constant="20" id="dQ3-CD-Kn1"/>
+                                    <constraint firstAttribute="height" constant="75" id="hYw-Ei-4p0"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="20"/>
-                                <state key="normal" title="LOCK NOTE">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="CreateNoteBtn:" destination="hR8-y1-ZvO" eventType="touchUpInside" id="1Om-bs-n2a"/>
-                                    <action selector="lockNoteBtn:" destination="kQq-uq-OVz" eventType="touchUpInside" id="c91-c5-KPY"/>
-                                </connections>
-                            </button>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="NIf-hX-8mh" firstAttribute="leading" secondItem="GVY-6p-tEB" secondAttribute="leading" id="6gH-xN-fCD"/>
+                            <constraint firstItem="NIf-hX-8mh" firstAttribute="bottom" secondItem="GVY-6p-tEB" secondAttribute="bottom" id="HBJ-PM-wKC"/>
                             <constraint firstItem="GVY-6p-tEB" firstAttribute="trailing" secondItem="b4X-qI-919" secondAttribute="trailing" constant="20" id="M6b-zK-1Px"/>
-                            <constraint firstItem="ahk-Ph-2Bk" firstAttribute="top" secondItem="b4X-qI-919" secondAttribute="bottom" constant="40" id="YKi-3E-bHk"/>
+                            <constraint firstItem="NIf-hX-8mh" firstAttribute="centerX" secondItem="Ozv-3E-bcN" secondAttribute="centerX" id="MqA-ga-p0R"/>
+                            <constraint firstItem="NIf-hX-8mh" firstAttribute="top" secondItem="b4X-qI-919" secondAttribute="bottom" constant="25" id="d0F-cc-OVF"/>
+                            <constraint firstItem="NIf-hX-8mh" firstAttribute="trailing" secondItem="GVY-6p-tEB" secondAttribute="trailing" id="fKW-FS-IQ4"/>
                             <constraint firstItem="b4X-qI-919" firstAttribute="top" secondItem="GVY-6p-tEB" secondAttribute="top" constant="20" id="iud-k4-PVJ"/>
-                            <constraint firstItem="GVY-6p-tEB" firstAttribute="trailing" secondItem="ahk-Ph-2Bk" secondAttribute="trailing" constant="20" id="sev-et-9Fo"/>
-                            <constraint firstItem="GVY-6p-tEB" firstAttribute="bottom" secondItem="ahk-Ph-2Bk" secondAttribute="bottom" constant="20" id="uKe-t6-B7i"/>
                             <constraint firstItem="b4X-qI-919" firstAttribute="leading" secondItem="GVY-6p-tEB" secondAttribute="leading" constant="20" id="uqp-5V-G4q"/>
-                            <constraint firstItem="ahk-Ph-2Bk" firstAttribute="leading" secondItem="GVY-6p-tEB" secondAttribute="leading" constant="20" id="wt4-qX-29r"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="GVY-6p-tEB"/>
                     </view>
                     <connections>
+                        <outlet property="btnView" destination="NIf-hX-8mh" id="GmE-he-hUz"/>
                         <outlet property="noteMessageTxt" destination="b4X-qI-919" id="8kF-tQ-rYV"/>
                     </connections>
                 </viewController>
@@ -181,37 +196,51 @@
                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zDD-RH-kDY">
-                                <rect key="frame" x="20" y="607" width="335" height="40"/>
-                                <color key="backgroundColor" red="0.91764705879999997" green="0.66274509800000003" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oco-ke-qfE">
+                                <rect key="frame" x="0.0" y="592" width="375" height="75"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zDD-RH-kDY">
+                                        <rect key="frame" x="20" y="17" width="335" height="40"/>
+                                        <color key="backgroundColor" red="0.91764705879999997" green="0.66274509800000003" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="Qen-Wx-YIf"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="20"/>
+                                        <state key="normal" title="CREATE &amp; LOCK">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="CreateNoteBtn:" destination="hR8-y1-ZvO" eventType="touchUpInside" id="B6X-YH-JCv"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="IXZ-AV-Xy7"/>
+                                    <constraint firstItem="zDD-RH-kDY" firstAttribute="top" secondItem="oco-ke-qfE" secondAttribute="top" constant="17" id="2QL-bk-6Uc"/>
+                                    <constraint firstAttribute="bottom" secondItem="zDD-RH-kDY" secondAttribute="bottom" constant="18" id="Ju7-dP-pVA"/>
+                                    <constraint firstAttribute="trailing" secondItem="zDD-RH-kDY" secondAttribute="trailing" constant="20" id="NSe-j8-uhZ"/>
+                                    <constraint firstItem="zDD-RH-kDY" firstAttribute="leading" secondItem="oco-ke-qfE" secondAttribute="leading" constant="20" id="aHJ-wA-F1n"/>
+                                    <constraint firstAttribute="height" constant="75" id="eDx-8n-6nF"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="20"/>
-                                <state key="normal" title="CREATE &amp; LOCK">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="CreateNoteBtn:" destination="hR8-y1-ZvO" eventType="touchUpInside" id="B6X-YH-JCv"/>
-                                </connections>
-                            </button>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="YpQ-dO-qz9" firstAttribute="top" secondItem="nbH-9n-46D" secondAttribute="bottom" constant="10" id="C4K-FA-e7a"/>
-                            <constraint firstItem="ehX-1q-css" firstAttribute="trailing" secondItem="zDD-RH-kDY" secondAttribute="trailing" constant="20" id="GMU-S2-CR4"/>
-                            <constraint firstItem="zDD-RH-kDY" firstAttribute="top" secondItem="YpQ-dO-qz9" secondAttribute="bottom" constant="40" id="HC1-jY-28S"/>
+                            <constraint firstItem="oco-ke-qfE" firstAttribute="trailing" secondItem="ehX-1q-css" secondAttribute="trailing" id="Wd6-jW-KoL"/>
                             <constraint firstItem="YpQ-dO-qz9" firstAttribute="leading" secondItem="ehX-1q-css" secondAttribute="leading" constant="20" id="XJN-mU-40Y"/>
+                            <constraint firstItem="oco-ke-qfE" firstAttribute="top" secondItem="YpQ-dO-qz9" secondAttribute="bottom" constant="25" id="Zen-79-O1D"/>
                             <constraint firstItem="nbH-9n-46D" firstAttribute="top" secondItem="ehX-1q-css" secondAttribute="top" constant="20" id="ZyJ-CK-vTR"/>
-                            <constraint firstItem="ehX-1q-css" firstAttribute="bottom" secondItem="zDD-RH-kDY" secondAttribute="bottom" constant="20" id="d8t-7I-fow"/>
+                            <constraint firstItem="oco-ke-qfE" firstAttribute="leading" secondItem="ehX-1q-css" secondAttribute="leading" id="ezQ-Za-7ut"/>
                             <constraint firstItem="ehX-1q-css" firstAttribute="trailing" secondItem="YpQ-dO-qz9" secondAttribute="trailing" constant="20" id="nus-aW-DKJ"/>
+                            <constraint firstItem="oco-ke-qfE" firstAttribute="bottom" secondItem="ehX-1q-css" secondAttribute="bottom" id="oNw-uG-JD6"/>
                             <constraint firstItem="nbH-9n-46D" firstAttribute="leading" secondItem="ehX-1q-css" secondAttribute="leading" constant="20" id="r5F-H7-ABB"/>
                             <constraint firstItem="ehX-1q-css" firstAttribute="trailing" secondItem="nbH-9n-46D" secondAttribute="trailing" constant="20" id="t77-XI-fRF"/>
-                            <constraint firstItem="zDD-RH-kDY" firstAttribute="leading" secondItem="ehX-1q-css" secondAttribute="leading" constant="20" id="ttM-td-0CF"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ehX-1q-css"/>
                     </view>
                     <connections>
+                        <outlet property="btnView" destination="oco-ke-qfE" id="ns6-Nf-VGI"/>
                         <outlet property="noteTitleTxt" destination="nbH-9n-46D" id="149-gr-wqe"/>
                         <outlet property="noteTxt" destination="YpQ-dO-qz9" id="cIg-AT-WKd"/>
                     </connections>

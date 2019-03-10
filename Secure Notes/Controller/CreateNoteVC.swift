@@ -16,9 +16,11 @@ class CreateNoteVC: UIViewController {
 
     @IBOutlet weak var noteTitleTxt: UITextField!
     @IBOutlet weak var noteTxt: UITextView!
+    @IBOutlet weak var btnView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        btnView.bindToKeyboard()
     }
 
     @IBAction func CreateNoteBtn(_ sender: UIButton) {
