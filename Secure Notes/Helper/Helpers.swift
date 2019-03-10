@@ -16,10 +16,4 @@ func isNoteLocked(_ lockStatus: LockStatus) -> Bool {
     }
 }
 
-func lockStatusSwitch(_ lockStatus: Bool) -> Bool {
-    if lockStatus == true {
-        return false
-    }else {
-        return true
-    }
-}
+
