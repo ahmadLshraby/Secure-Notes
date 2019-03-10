@@ -17,8 +17,6 @@ class NoteVC: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
@@ -28,6 +26,7 @@ class NoteVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         loadNotes()
+        tableView.reloadData()
     }
 
     func loadNotes() {

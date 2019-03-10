@@ -13,12 +13,12 @@ class Note: Object {
     
      @objc dynamic var message: String = ""
      @objc dynamic var noteTitle: String = ""
-    var lockStatus: LockStatus = .unlocked
+     @objc dynamic var isLocked: Bool = false
     
-    convenience init(message: String, noteTitle: String, lockStatus: LockStatus) {
+    convenience init(message: String, noteTitle: String, isLocked: Bool) {
         self.init()
         self.message = message
         self.noteTitle = noteTitle
-        self.lockStatus = lockStatus
+        self.isLocked = isLocked
     }
 }

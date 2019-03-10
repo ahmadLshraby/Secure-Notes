@@ -19,11 +19,10 @@ class NoteCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
     }
 
     func configureCell(note: Note) {
-        if note.lockStatus == .locked {
+        if note.isLocked == true {
             titleLbl.text = "This Note is Locked, Unlock to read"
             lockImageView.isHidden = false
         }else {
