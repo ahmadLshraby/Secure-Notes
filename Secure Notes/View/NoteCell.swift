@@ -22,11 +22,10 @@ class NoteCell: UITableViewCell {
     }
 
     func configureCell(note: Note) {
+        titleLbl.text = note.noteTitle
         if note.isLocked == true {
-            titleLbl.text = "This Note is Locked, Unlock to read"
             lockImageView.isHidden = false
         }else {
-            titleLbl.text = note.noteTitle
             lockImageView.isHidden = true
         }
     }
