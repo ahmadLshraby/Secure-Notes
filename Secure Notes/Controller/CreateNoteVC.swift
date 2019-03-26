@@ -20,7 +20,7 @@ class CreateNoteVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        btnView.bindToKeyboard()
+        //btnView.bindToKeyboard()
     }
 
     @IBAction func CreateNoteBtn(_ sender: UIButton) {

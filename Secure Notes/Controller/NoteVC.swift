@@ -60,7 +60,7 @@ class NoteVC: UIViewController {
         let myLocalizedReasonString = "Secure Notes uses Touch ID / Face ID ."
         var authError: NSError?
         
-        // must iOS > 8.0, check the we have OS support touch id
+        // must iOS > 8.0, check that we have OS support touch id
         if #available(iOS 8.0, macOS 10.12.1, *) {
             // to check if the device uses touch id or face id or not
             if myContext.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &authError) {
@@ -124,7 +124,7 @@ extension NoteVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
         let deleteAction = UITableViewRowAction(style: .destructive, title: "🗑 \n DELETE") { (rowAction, indexPath) in
-            self.delete(indexPath: indexPath)
+            self.delete(indexPath: indexPath) // delete from Realm
             tableView.deleteRows(at: [indexPath], with: .automatic)  // delete the row of that indexPath
             self.loadNotes()
         }

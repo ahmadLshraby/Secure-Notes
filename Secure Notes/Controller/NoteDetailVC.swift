@@ -22,7 +22,7 @@ class NoteDetailVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         noteMessageTxt.text = note?.message
-        btnView.bindToKeyboard()
+    //    btnView.bindToKeyboard()
     }
     
     @IBAction func lockNoteBtn(_ sender: UIButton) {
